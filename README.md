@@ -1,27 +1,70 @@
-# SimpleNGXSCRUDAPP
+# Simple-NGXS-CRUD-APP
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 
-## Development server
+## Devlelopment Steps
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+MongoDB Username Details
+Username: kumaruidec
+Password: $Kumar3861 <--
+Username: kumariu
+Password: $Kumar4321 <--
 
-## Code scaffolding
+bootstrap Login: https://bootsnipp.com/snippets/GaZG0
+ng new <AppName> --style=scss --routing
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Ng-Bootstrap Verstion List
+https://www.npmjs.com/package/@ng-bootstrap/ng-bootstrap
 
-## Build
+## Install BootStrap / Ng-BootStrap
+Step1: ng new [AppName] --style=scss --routing --prefix myprefix
+Step2: npm install --save @ng-bootstrap/ng-bootstrap@4.2.1 [specific version for Angular 7]
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
-## Running unit tests
+@NgModule({
+  ...
+  imports: [NgbModule, ...],
+  ...
+})
+export class YourAppModule {
+}
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Step1: npm install bootstrap --save
+Step2: Open angular.json
+"styles": [
+  "src/styles.scss",
+  "node_modules/bootstrap/dist/css/bootstrap.min.css"
+],
 
-## Running end-to-end tests
+## Fake Server
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Step1: npm install json-server
+Step2: create db.json
+Step3: Create some initial Data in db.json file
+Step4: Edit package.json start property ["start": "concurrently \"ng serve\" \"json-server --watch db.json\" ",]
+Step5: npm install concurrently
+Step6: npm run start [For run the app]
 
-## Further help
+## Install NGXS
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Step:1: npm install @ngxs/store --save  [Yarn: yarn add @ngxs/store]
+
+
+## Install NGXS Logger Plugin & Devtool Plugin
+
+Step2: npm install @ngxs/store@dev --save
+Step3: npm install @ngxs/logger-plugin@dev --save [Yarn: yarn add @ngxs/logger-plugin @ngxs/devtools-plugin --dev]
+
+## NGXS/NGRX-Redux-Architecture
+
+![NGXS-2](https://user-images.githubusercontent.com/30646609/60645886-87d90180-9e57-11e9-818d-d1c6f8eea6fd.png)
+![NGXS-1](https://user-images.githubusercontent.com/30646609/60645850-798ae580-9e57-11e9-9280-3a7a131b73e2.png)
+
+
+## Angular Vs React
+
+![Angular-Vs-React](https://user-images.githubusercontent.com/30646609/60645904-92939680-9e57-11e9-86f9-de5a38adc76c.jpg)
+
+## NGXS Flow Diagram
+![Ngrx-Image](https://user-images.githubusercontent.com/30646609/62344444-b22be680-b50b-11e9-85ae-7ce70f588995.JPG)
